@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { isEmpty } from 'lodash';
 import './App.css';
 
 class App extends Component {
+  state = {
+    posts: [],
+    loading: false,
+  };
+
   render() {
+    const { posts } = this.state;
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <pre>
+          <samp>
+            {isEmpty(posts) ? (
+              <h1>No data found</h1>
+            ) : (
+              JSON.stringify(posts, null, 2)
+            )}
+          </samp>
+        </pre>
       </div>
     );
   }

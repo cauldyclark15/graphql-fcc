@@ -3,7 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "apollo-boost": "^0.1.14",
+    "apollo-server-express": "^2.0.4",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.0.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
+    "lodash": "^4.17.10",
+    "node-fetch": "^2.2.0",
     "react": "^16.4.2",
+    "react-apollo": "^2.1.11",
     "react-dom": "^16.4.2",
     "react-scripts": "1.1.5"
   },
@@ -11,7 +22,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "nodemon server/server.js",
+    "graph": "nodemon server/graph-server.js",
+    "app": "concurrently 'yarn graph' 'yarn server' 'yarn start'"
   },
   "main": "index.js",
   "author": "cauldyclark15 <jcing.jc@gmail.com>",
