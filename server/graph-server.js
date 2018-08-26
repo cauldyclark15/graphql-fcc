@@ -15,7 +15,7 @@ var typeDefs = gql`
   }
 
   type Post {
-    userID: ID
+    userId: ID
     id: ID
     title: String
     body: String
@@ -23,7 +23,7 @@ var typeDefs = gql`
   }
 
   type Comment {
-    postID: ID
+    postId: ID
     id: ID
     name: String
     email: String

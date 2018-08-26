@@ -25,6 +25,7 @@
     "eject": "react-scripts eject",
     "server": "nodemon server/server.js",
     "graph": "nodemon server/graph-server.js",
+    "web-s": "concurrently 'yarn server' 'yarn start'",
     "app": "concurrently 'yarn graph' 'yarn server' 'yarn start'"
   },
   "main": "index.js",
